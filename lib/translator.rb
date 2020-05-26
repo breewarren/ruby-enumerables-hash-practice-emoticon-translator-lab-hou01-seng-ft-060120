@@ -6,8 +6,8 @@ library = YAML.load_file("lib/emoticons.yml")
 revised_library = {}
 library.each do |key, value|
   revised_library[key][:english] = value[0]
-  revised_library[key][:japanese] = value[1]
   binding.pry
+  revised_library[key][:japanese] = value[1]
  revised_library << "#{[expression]}: english: #{translation[0]}, japanese: #{translation[1]} "
   end
   revised_library
