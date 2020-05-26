@@ -18,7 +18,6 @@ end
 #frank_emo[name][:japanese] = arrays[1]
 
 
-
 #def get_japanese_emoticon
   # code goes here
 #end
