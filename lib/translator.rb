@@ -14,11 +14,11 @@ end
 
 def get_english_meaning(file_path, emoticon)
   load_library(file_path)
+  library.each do |,|
 end
   
 
 #def get_english_meaning(file_path, jap_emo)
-  # code goes here
  # library = load_library('./lib/emoticons.yml')
   #library.each do |meaning, idioms|
    # return meaning if idioms[:japanese] == jap_emo
