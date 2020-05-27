@@ -3,16 +3,15 @@ require 'pry'
 
 def load_library(file_path)
 library = YAML.load_file("lib/emoticons.yml")
-final_result = {expression: {}, emoticon: {}}
+final_result = {get_meaning: {}, get_emoticon: {}}
 library.each do |key, value|
-  binding.pry
-  key = final_result[:expression][value[1]]
-  value = final_result[:emoticon][value[0]]
+  final_result[:get_meaning][value[1]] = key
+  final_result[:get_emoticon][value[0]] = value[1]
 end
 final_result
 end
-  
- 
+
+
 
 #response = {"get_meaning" => {}, "get_emoticon" => {}}
  # library.each do |trans, emos|
