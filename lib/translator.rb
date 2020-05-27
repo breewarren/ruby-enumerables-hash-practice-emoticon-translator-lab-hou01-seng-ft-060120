@@ -18,8 +18,8 @@ end
  # library.each do |trans, emos|
   #  response["get_meaning"][emos[1]] = trans
   #  response["get_emoticon"][emos[0]] = emos[1]
-  # end
-  # response
+#end
+ # response
 
 #frank_emo[name] ||= {}
 #frank_emo[name][:english] = arrays[0]
