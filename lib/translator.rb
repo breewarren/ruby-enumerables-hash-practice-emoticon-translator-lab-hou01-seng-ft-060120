@@ -14,9 +14,8 @@ end
 
 def get_english_meaning(file_path, emoticon)
   library = load_library(file_path)
-  library[:japanese].each do |key, value|
 end
-end
+
   
 
 #def get_english_meaning(file_path, jap_emo)
