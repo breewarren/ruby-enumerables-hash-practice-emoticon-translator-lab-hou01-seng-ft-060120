@@ -11,14 +11,16 @@ end
 final_result
 end
 
-#
 
-#response = {"get_meaning" => {}, "get_emoticon" => {}}
- # library.each do |trans, emos|
-  #  response["get_meaning"][emos[1]] = trans
-  #  response["get_emoticon"][emos[0]] = emos[1]
-#end
- # response
+
+  frank_emo = {}
+  emo.each do |name,arrays|
+      frank_emo[name] || = {}
+      frank_emo[name][:english] = arrays[0]
+      frank_emo[name][:japanese] = arrays[1]
+  end
+frank_emo
+end
 
 #frank_emo[name] || = {}
 #frank_emo[name][:english] = arrays[0]
