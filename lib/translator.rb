@@ -5,7 +5,7 @@ def load_library(file_path)
 library = YAML.load_file("lib/emoticons.yml")
 final_result = {}
 library.each do |key, value|
-  final_result[key] ||= {}
+  final_result[key] || final_result[key] = {}
   final_result[key][:english] = value[0]
   final_result[key][:japanese] = value[2]
 end
