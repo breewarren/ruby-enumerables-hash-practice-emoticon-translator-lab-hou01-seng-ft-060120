@@ -3,14 +3,28 @@ require 'pry'
 
 def load_library(file_path)
 library = YAML.load_file("lib/emoticons.yml")
-revised_library = {}
+final_result = {expression: {}, emoticon: {}}
 library.each do |key, value|
-  revised_library[key][:english] = value[0]
-  revised_library[key][:japanese] = value[1]
- revised_library << "#{[expression]}: english: #{translation[0]}, japanese: #{translation[1]} "
-  end
-  revised_library
+  key = final_result[:expression][value[1]]
+  value = final_result[:emoticon][value[0]]
 end
+final_result
+end
+  
+  
+#  revised_library[key][:english] = value[0]
+#  revised_library[key][:japanese] = value[1]
+# revised_library << "#{[expression]}: english: #{translation[0]}, japanese: #{translation[1]} "
+#  end
+  revised_library
+# end
+
+#response = {"get_meaning" => {}, "get_emoticon" => {}}
+ # library.each do |trans, emos|
+  #  response["get_meaning"][emos[1]] = trans
+  #  response["get_emoticon"][emos[0]] = emos[1]
+  # end
+  # response
 
 #frank_emo[name] ||= {}
 #frank_emo[name][:english] = arrays[0]
