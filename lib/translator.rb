@@ -15,7 +15,7 @@ end
 
   frank_emo = {}
   emo.each do |name,arrays|
-      frank_emo[name] || = {}
+      frank_emo[name] ||= {}
       frank_emo[name][:english] = arrays[0]
       frank_emo[name][:japanese] = arrays[1]
   end
