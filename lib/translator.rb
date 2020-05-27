@@ -3,7 +3,7 @@ require 'pry'
 
 def load_library(file_path)
 library = YAML.load_file("lib/emoticons.yml")
-final_result = {english: {}, japanese: {}}
+final_result = {}
 library.each do |key, value|
   final_result[:english][value[1]] = key
   final_result[:japanese][value[0]] = value[1]
@@ -12,10 +12,9 @@ final_result
 end
 
 
-
   frank_emo = {}
   emo.each do |name,arrays|
-      frank_emo[name] ||= {}
+      frank_emo[name] || frank_emo[name] = {}
       frank_emo[name][:english] = arrays[0]
       frank_emo[name][:japanese] = arrays[1]
   end
