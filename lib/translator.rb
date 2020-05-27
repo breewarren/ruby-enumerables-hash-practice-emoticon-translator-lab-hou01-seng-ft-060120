@@ -11,13 +11,7 @@ end
 final_result
 end
   
-  
-#  revised_library[key][:english] = value[0]
-#  revised_library[key][:japanese] = value[1]
-# revised_library << "#{[expression]}: english: #{translation[0]}, japanese: #{translation[1]} "
-#  end
-  revised_library
-# end
+ 
 
 #response = {"get_meaning" => {}, "get_emoticon" => {}}
  # library.each do |trans, emos|
