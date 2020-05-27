@@ -5,6 +5,7 @@ def load_library(file_path)
 library = YAML.load_file("lib/emoticons.yml")
 final_result = {expression: {}, emoticon: {}}
 library.each do |key, value|
+  binding.pry
   key = final_result[:expression][value[1]]
   value = final_result[:emoticon][value[0]]
 end
