@@ -13,7 +13,7 @@ final_result
 end
 
 def get_english_meaning(file_path, emoticon)
-
+end
   
 
 #def get_english_meaning(file_path, jap_emo)
