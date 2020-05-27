@@ -1,17 +1,25 @@
 require 'yaml'
 require 'pry'
 
-def load_library(file_path)
-library = YAML.load_file("lib/emoticons.yml")
-final_result = {get_meaning: {}, get_emoticon: {}}
-library.each do |key, value|
-  final_result[:get_meaning][value[1]] = key
-  final_result[:get_emoticon][value[0]] = value[1]
-end
-final_result
-end
+#def load_library(file_path)
+#library = YAML.load_file("lib/emoticons.yml")
+#final_result = {get_meaning: {}, get_emoticon: {}}
+#library.each do |key, value|
+#  final_result[:get_meaning][value[1]] = key
+#  final_result[:get_emoticon][value[0]] = value[1]
+#end
+#final_result
+#end
 
-
+def load_library(yaml_file)
+  # code goes here	  response = {"get_meaning" => {}, "get_emoticon" => {}}
+  library = YAML.load_file(yaml_file)
+  library.each do |trans, emos|
+    response["get_meaning"][emos[1]] = trans
+    response["get_emoticon"][emos[0]] = emos[1]
+  end
+  response
+end	end
 
 #response = {"get_meaning" => {}, "get_emoticon" => {}}
  # library.each do |trans, emos|
