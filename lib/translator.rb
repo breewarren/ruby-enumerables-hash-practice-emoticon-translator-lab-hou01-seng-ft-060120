@@ -12,29 +12,25 @@ end
 final_result
 end
 
-def get_english_meaning(file_path, emoticon)
+def get_english_meaning(file_path, jap_emoticon)
   library = load_library(file_path)
   library.each do |key, value|
-    if value[:japanese] == emoticon
+    if value[:japanese] == jap_emoticon
     return key
   end
 end
 "Sorry, that emoticon was not found"
 end
 
-def get_japanese_emoticon (file_path, emoticon)
+def get_japanese_emoticon (file_path, eng_emoticon)
   library = load_library(file_path)
+  library.each do |key, value|
+    if value[:english] == eng_emoticon
+      return value[:japanese]
+    end
+  end
+  "Sorry, that emoticon was not found"
 end
-
-
-#def get_japanese_emoticon(file_path, eng_emo)
-  # code goes here
-  #library = load_library('./lib/emoticons.yml')
-  #library.each do |meaning, idioms|
-   #   return idioms[:japanese] if idioms[:english] == eng_emo
-  #end
- # "Sorry, that emoticon was not found"
-#end
 
 
  
